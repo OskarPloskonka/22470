@@ -1,1 +1,30 @@
-aasdasdasd
+/**
+ * Klasa reprezentująca prosty kalkulator umożliwiający wykonanie operacji dodawania, odejmowania, mnożenia i dzielenia na dwóch liczbach.
+ * Wykorzystuje bibliotekę Swing do wyświetlania okien dialogowych.
+ */
+public class Calculator {
+    /**
+     * Metoda główna programu, od której rozpoczyna się jego wykonanie.
+     *
+     * @param args Argumenty wiersza poleceń (nie są wykorzystywane w tym programie).
+     */
+    public static void main(String[] args) {
+        // Pobranie pierwszej liczby od użytkownika
+        String firstNumber = JOptionPane.showInputDialog("Podaj pierwszą liczbę:");
+        double number1 = Double.parseDouble(firstNumber);
+
+        // Pobranie drugiej liczby od użytkownika
+        String secondNumber = JOptionPane.showInputDialog("Podaj drugą liczbę:");
+        double number2 = Double.parseDouble(secondNumber);
+
+        // Wyświetlenie opcji operacji matematycznych
+        String[] options = {"Dodawanie", "Odejmowanie", "Mnożenie", "Dzielenie"};
+        int choice = JOptionPane.showOptionDialog(
+                null,
+                "Wybierz operację:",
+                "Kalkulator",
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                options,
+                options[0]);
